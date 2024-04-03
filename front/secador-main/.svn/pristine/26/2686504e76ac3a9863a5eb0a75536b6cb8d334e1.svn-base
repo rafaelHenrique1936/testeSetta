@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Permission Denied</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, maximum-scale=2" />
+    <link rel="stylesheet" href="../theme.compiled.css">
+
+    <script>
+        (function (d, script) {
+            script = d.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.onload = function () {
+                _mdsp.init({
+                    appId: '_mscontent',
+                    appInfoPath: '/rest/os-bar/v1/config',
+                    initialize: true,
+                });
+            };
+            script.onerror = function () {
+                var body = d.getElementsByTagName('body')[0];
+                var html =
+                    '<osbar-root id="OSBarErrorText" class="mdsp_osbf_outer">' +
+                    '<div class="mdsp_osbf_inner">Insights Hub OSBar could not be loaded. Please check your ' +
+                    '<a title="Proxy Settings" class="mdsp_osbf_link" target="_blank" rel="noopener" href="https://docs.mendix.com/partners/siemens/mindsphere-development-considerations#localtesting"> proxy settings</a>' +
+                    '<span> or the OSBarURL in the InsightsHubOSBarConnector</span>' +
+                    '</div>' +
+                    '</osbar-root>';
+
+                body.insertAdjacentHTML('afterbegin', html); var OSBarErrorText = document.getElementById("OSBarErrorText");
+                body.className = body.className + " mdsp_osbf_body"
+            };
+            script.src = '/rest/os-bar/v1/osbar.loader.js';
+            d.getElementsByTagName('head')[0].appendChild(script);
+        })(document);
+    </script>
+</head>
+
+<body style="margin: 0px; padding: 0px; overflow: hidden">
+    <div id="_mscontent" class="center">
+        <div>
+            <img src="../img/were_sorry-2@1x.svg" />
+        </div>
+        <h1>Dear user</h1>
+        <p></p>
+        <div>The assigned Insights Hub user scopes:</div>
+        <div id="InsightsHubApplicationScopes" style="font-weight: bold;"></div>
+        <div>do not match to any given Mendix roles:</div>
+        <div id="MendixRoles" style="font-weight: bold;"></div>
+        <div>Please check role assignment for app and user</div>
+        <div>For more information see also:</div>
+        <a target="_blank" rel="noopener noreferrer"
+            href="https://developer.mindsphere.io/howto/howto-app-mendix-development.html#roles-and-scopes">Roles and
+            Scopes</a>
+    </div>
+    <script>
+        function GetURLParameter(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }
+        var mdspScopes = GetURLParameter('mdspScopes');
+        var mendixRoles = GetURLParameter('mendixRoles');
+        document.getElementById('InsightsHubApplicationScopes').innerText = mdspScopes.replace(/,/gi, ', ');
+        document.getElementById('MendixRoles').innerText = mendixRoles.replace(/,/gi, ', ');
+    </script>
+</body>
+<style>
+    h1 {
+        color: #D2D2D2;
+    }
+
+    .center {
+        text-align: center;
+        color: #d2d2d2;
+        margin: 7% auto !important;
+        padding: 10px;
+    }
+</style>
+
+</html>

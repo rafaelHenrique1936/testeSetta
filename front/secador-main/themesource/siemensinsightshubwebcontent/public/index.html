@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Insights Hub</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <script>
+        // Insights Hub specific part-1: We have to use the XSRF-TOKEN on fetch requests.
+        (function () {
+            // Read cookie below
+            function getCookie(name) {
+                match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+                if (match) return match[2];
+                else return '';
+            }
+
+            var xrsfToken = getCookie('XSRF-TOKEN');
+            if (window.fetch) {
+                var originalFetch = window.fetch;
+                window.fetch = function (url, init) {
+                    if (!init) {
+                        init = {};
+                    }
+                    if (!init.headers) {
+                        init.headers = new Headers();
+                    }
+                    var tokenAvailable =
+                        typeof init.headers.get === 'function'
+                            ? init.headers.get('x-xsrf-token')
+                            : init.headers.hasOwnProperty('x-xsrf-token');
+
+                    if (!tokenAvailable) {
+                        if (typeof init.headers.set === 'function') {
+                            init.headers.set('x-xsrf-token', xrsfToken);
+                        } else {
+                            init.headers['x-xsrf-token'] = xrsfToken;
+                        }
+                    }
+                    return originalFetch(url, init);
+                };
+            }
+            if (!window.fetch || (window.fetch && /Edge/.test(navigator.userAgent))) {
+                var originalXMLHttpRequest = window.XMLHttpRequest;
+                window.XMLHttpRequest = function () {
+                    var result = new originalXMLHttpRequest(arguments);
+
+                    // overwrite setRequestHeader function to make sure to set the x-xsrf-token only once
+                    result.setRequestHeader = function (header, value) {
+                        if (header) {
+                            if (header.toLowerCase().indexOf('x-xsrf-token') !== -1) {
+                                if (this.xsfrTokenSet === true) {
+                                    // token is already in place -> so do nothing
+                                    return;
+                                }
+                                this.xsfrTokenSet = true;
+                            }
+                        }
+                        originalXMLHttpRequest.prototype.setRequestHeader.apply(this, arguments);
+                    };
+
+                    // overwrite open function to make sure to set the x-xsrf-token at least once
+                    result.open = function () {
+                        originalXMLHttpRequest.prototype.open.apply(this, arguments);
+
+                        this.setRequestHeader('x-xsrf-token', xrsfToken);
+                    };
+                    return result;
+                };
+            }
+        })();
+            // Insights Hub specific part-1: ends
+    </script>
+
+    <script>
+        // Insights Hub specific part-2: Use the sso-login.html to prevent the Gateway taking over login.html and perform SSO
+        // Always set originURI Cookie.
+        document.cookie = 'originURI=/sso-login.html';
+            // Insights Hub specific part-2: ends
+    </script>
+
+    <script>
+        // Insights Hub specific part-3: OS Bar related code
+        var loadMendix = function () {
+            // dojoConfig needs to be defined before loading mxui.js
+            dojoConfig = {
+                isDebug: false,
+                baseUrl: 'mxclientsystem/dojo/',
+                cacheBust: '{{cachebust}}',
+                rtlRedirect: 'index-rtl.html',
+            };
+            // make sure that the mxui.js is loaded after /rest/os-bar/v1/loader to prevent problems with the height calculation of some elements
+            (function (d2, script2) {
+                script2 = d2.createElement('script');
+                script2.src = 'mxclientsystem/mxui/mxui.js?{{cachebust}}';
+                script2.async = true;
+                d2.getElementsByTagName('body')[0].appendChild(script2);
+            })(document);
+        };
+        var onError = function (d1) {
+            var body = d1.getElementsByTagName('body')[0];
+            var content = d1.getElementById('content');
+            var html =
+                '<osbar-root id="OSBarErrorText" class="mdsp_osbf_outer">' +
+                '<div class="mdsp_osbf_inner">Insights Hub OSBar could not be loaded. Please check your ' +
+                '<a title="Proxy Settings" class="mdsp_osbf_link" target="_blank" rel="noopener" href="https://docs.mendix.com/partners/siemens/mindsphere-development-considerations#localtesting"> proxy settings</a>' +
+                '<span> or the OSBarURL in the InsightsHubOSBarConnector</span>' +
+                '</div>' +
+                '</osbar-root>';
+
+            body.insertAdjacentHTML('afterbegin', html);
+            body.className = body.className + " mdsp_osbf_body";
+            content.className = content.className + "_mdsp_osbf_content";
+            loadMendix();
+        };
+
+        var initOsBar = function (url, d1, script1) {
+            script1 = d1.createElement('script');
+            script1.type = 'text/javascript';
+            script1.async = true;
+            script1.onload = function () {
+                _mdsp.init({
+                    appId: 'content',
+                    appInfoPath: '/rest/os-bar/v1/config',
+                    initialize: true,
+                });
+                loadMendix();
+            };
+            script1.onerror = () => onError(d1);
+            script1.src = url;
+            d1.getElementsByTagName('head')[0].appendChild(script1);
+        };
+
+        (async function () {
+            try {
+                const resp = await window.fetch('/rest/os-bar/v1/osbar.url');
+                const body = await resp.json();
+                if (body.osBarUrl) {
+                    initOsBar(body.osBarUrl, document);
+                }
+            } catch (error) {
+                onError(document);
+            }
+
+        })();
+            // Insights Hub specific part-3: ends
+    </script>
+
+    {{themecss}} {{appicons}} {{manifest}} {{startupimages}}
+
+    <!-- ICONS EXAMPLE -->
+
+    <!-- iPhone retina icon (iOS < 7) -->
+    <!-- <link href="resources/ios/icons/apple-touch-icon-precomposed-114x114.png" sizes="114x114" rel="apple-touch-icon-precomposed"> -->
+
+    <!-- STARTUP IMAGES -->
+    <!-- <link href="resources/ios/startup/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" rel="apple-touch-startup-image"> -->
+</head>
+
+<body dir="ltr">
+    <div id="content"></div>
+</body>
+
+</html>

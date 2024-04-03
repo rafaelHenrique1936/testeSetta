@@ -1,0 +1,70 @@
+Initialized native services in: C:\Users\steph\.gradle\native
+Initialized jansi services in: C:\Users\steph\.gradle\native
+Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot, JAVA_VERSION=11.0.20.1, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=11.0.20.1+1, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=11.0.20.1+1, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+The client will now receive all logging from the daemon (pid: 17096). The daemon log file: C:\Users\steph\.gradle\daemon\7.6\daemon-17096.out.log
+Starting 2nd build in daemon [uptime: 36.876 secs, performance: 99%, non-heap usage: 18% of 256 MiB]
+Using 4 worker leases.
+Now considering [C:\Users\steph\Mendix\secador-main\deployment] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\Users\steph\Mendix\secador-main\deployment\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\steph\Mendix\secador-main\deployment\build.gradle'.
+Included projects: [root project 'deployment']
+
+> Configure project :
+Evaluating root project 'deployment' using build file 'C:\Users\steph\Mendix\secador-main\deployment\build.gradle'.
+All projects evaluated.
+Task name matched 'clean-custom-classes'
+Task name matched 'compile'
+Task name matched 'package'
+Selected primary task 'clean-custom-classes' from project :
+Selected primary task 'compile' from project :
+Selected primary task 'package' from project :
+Tasks to be executed: [task ':clean-custom-classes', task ':compile', task ':package']
+Tasks that were excluded: []
+Resolve mutations for :clean-custom-classes (Thread[included builds,5,main]) started.
+:clean-custom-classes (Thread[included builds,5,main]) started.
+destroyer locations for task group 0 (Thread[Execution worker Thread 2,5,main]) started.
+destroyer locations for task group 1 (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :clean-custom-classes
+Caching disabled for task ':clean-custom-classes' because:
+  Build cache is disabled
+Task ':clean-custom-classes' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :compile (Thread[included builds,5,main]) started.
+:compile (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :compile
+Caching disabled for task ':compile' because:
+  Build cache is disabled
+Task ':compile' is not up-to-date because:
+  Output property 'destinationDirectory' file C:\Users\steph\Mendix\secador-main\deployment\run\bin has been removed.
+  Output property 'destinationDirectory' file C:\Users\steph\Mendix\secador-main\deployment\run\bin\databaseconnector has been removed.
+  Output property 'destinationDirectory' file C:\Users\steph\Mendix\secador-main\deployment\run\bin\databaseconnector\actions has been removed.
+The input changes require a full rebuild for incremental task ':compile'.
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot'.
+Compiling with JDK Java compiler API.
+Class dependency analysis for incremental compilation took 0.405 secs.
+Created classpath snapshot for incremental compilation in 0.117 secs.
+Resolve mutations for :package (Thread[Execution worker Thread 2,5,main]) started.
+:package (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :package
+Caching disabled for task ':package' because:
+  Build cache is disabled
+Task ':package' is not up-to-date because:
+  Input property 'rootSpec$1$1' file C:\Users\steph\Mendix\secador-main\deployment\run\bin\databaseconnector\proxies\objTemperatura$MemberNames.class has changed.
+  Input property 'rootSpec$1$1' file C:\Users\steph\Mendix\secador-main\deployment\run\bin\databaseconnector\proxies\objTemperatura.class has changed.
+  Input property 'rootSpec$1$1' file C:\Users\steph\Mendix\secador-main\deployment\run\bin\databaseconnector\proxies\objUmidade$MemberNames.class has changed.
+
+BUILD SUCCESSFUL in 8s
+3 actionable tasks: 3 executed
+Watched directory hierarchies: [C:\Users\steph\Mendix\secador-main\deployment]
+
+
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+

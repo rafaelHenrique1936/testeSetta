@@ -1,0 +1,7 @@
+2024-02-25 11:45:11.935 INFO - M2EE: Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'
+[rtlauncher:container$] INFO Container start took 3319. Ready to accept admin requests.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+
+

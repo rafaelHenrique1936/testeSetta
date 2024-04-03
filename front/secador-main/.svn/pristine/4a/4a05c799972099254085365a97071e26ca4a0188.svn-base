@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Atlas layout
+   
+   The core structure of all atlas layouts
+========================================================================== */
+#_mdspbar {
+    z-index: 99 !important; // reduce the z-index of the OS-Bar so that a modal window will be fully visible
+}
+
+@mixin layout-atlas() {
+    .layout-atlas {
+
+        // Sidebar
+        .region-sidebar {
+            .mx-scrollcontainer-wrapper {
+                padding: 0;
+                overflow: hidden;
+            }
+
+            border-right: 1px solid #e8e8e8;
+            box-shadow: 0 0 4px 0 rgb(0 0 0 / 8%);
+
+            .btn-inverse {
+                color: $grey800;
+            }
+        }
+
+        // Topbar
+        .region-topbar {
+            border-bottom: 1px solid #e8e8e8;
+            box-shadow: 0 0 4px 0 rgb(0 0 0 / 8%);
+
+            &::before {
+                height: 0px;
+            }
+
+            .glyphicon {
+                color: $grey800;
+            }
+
+            .topbar-content {
+
+                .toggle-btn {
+                    border-top: 1px solid rgba(232, 232, 232, 0.5);
+                    @include iconUxt-bold(arrowDoubleRight);
+                    position: fixed;
+                    padding: 8px;
+                    bottom: 0;
+                    left: 0px;
+                    margin: 0;
+                    height: $uxt-sidebar-toggle-button-height;
+                    width: 0;
+                    border-top: 1px solid rgba(232, 232, 232, 0.5);
+                    color: $font-color-detail;
+                    width: $navsidebar-width-closed - 1px;
+
+                    &:before {
+                        display: none;
+                        position: fixed;
+                        left: 20px;
+                        transform: rotate(0deg);
+                        transition: transform 0.3s ease-in-out;
+                        font-size: 14px;
+                        display: block;
+                    }
+
+                    &:hover {
+                        background-color: $navsidebar-bg-hover;
+                        color: $navigation-color-hover;
+                    }
+
+                    &:after {
+                        transition: opacity 0.15s;
+                        transition-delay: 0.15s;
+                        opacity: 0;
+                        content: " ";
+                    }
+
+                    img {
+                        width: 0;
+                    }
+                }
+
+                .navbar-brand {
+                    display: $uxt-show-default-app-icon;
+                }
+            }
+        }
+
+        .mx-scrollcontainer-open {
+            .region-topbar {
+                .topbar-content {
+                    .toggle-btn {
+                        width: $navsidebar-width-open - 1px;
+
+                        &:before {
+                            display: block;
+                            transform: rotate(180deg);
+                            transition: transform 0.3s ease-in-out;
+                        }
+
+                        &:after {
+                            content: "Collapse";
+                            margin-left: -80px;
+                            font-size: 14px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Atlas layout
+   
+   Extra styling for responsive layouts
+========================================================================== */
+@mixin layout-atlas-responsive() {
+    .layout-atlas-responsive-default {
+
+        .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open)>.region-sidebar,
+        .mx-scrollcontainer-push:not(.mx-scrollcontainer-open)>.region-sidebar,
+        .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open)>.region-sidebar {
+            width: $navsidebar-width-closed !important;
+
+            .mx-scrollcontainer-wrapper>.mx-navigationtree ul li {
+                &.mx-navigationtree-has-items:hover {
+                    ul {
+                        position: absolute;
+                        z-index: 100;
+                        top: 0;
+                        bottom: 0;
+                        left: $navsidebar-width-closed - 1;
+                        display: block;
+                        overflow-y: auto;
+                        min-width: auto;
+                        padding: $spacing-small 0;
+                    }
+                }
+
+                &.mx-navigationtree-collapsed,
+                &.mx-navigationtree-has-items {
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .mx-scrollcontainer-wrapper>.mx-navigationtree ul li {
+            ul {
+                border-bottom: 1px solid rgba(232, 232, 232, 0.8);
+            }
+        }
+
+        .mx-scrollcontainer:not(.mx-scrollcontainer-open)>.region-sidebar {
+            width: $navsidebar-width-closed !important;
+
+            .mx-scrollcontainer-wrapper>.mx-navigationtree ul li {
+                &.mx-navigationtree-has-items:hover {
+                    ul {
+                        left: $navsidebar-width-closed;
+                    }
+                }
+            }
+        }
+
+        // Sidebar
+        .region-sidebar {
+
+            .mx-scrollcontainer-wrapper>.mx-navigationtree {
+                .navbar-inner>ul>li {
+                    &>a {
+                        height: $topbar-minimalheight + 1px;
+
+                        // Glyph icon
+                        &.active {
+                            .glyphicon {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

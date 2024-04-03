@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="javasource"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.24.3.8044/runtime/bundles/com.mendix.json.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.24.3.8044/runtime/bundles/com.mendix.logging-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.24.3.8044/runtime/bundles/com.mendix.m2ee-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.24.3.8044/runtime/bundles/com.mendix.public-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.24.3.8044/runtime/bundles/javax.servlet.servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.24.3.8044/runtime/bundles/javax.websocket.websocket-api.jar"/>
+	<classpathentry kind="lib" path="userlib/com.ibm.db2.jcc.db2jcc-db2jcc4.jar"/>
+	<classpathentry kind="lib" path="userlib/com.microsoft.sqlserver.mssql-jdbc-9.4.0.jre11.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.ha.ons-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.ha.simplefan-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.jdbc.ojdbc8-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.jdbc.ucp-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.oraclepki-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.osdt_cert-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.osdt_core-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.zaxxer.HikariCP-5.0.1.jar"/>
+	<classpathentry kind="lib" path="userlib/httpcore5-5.0.3.jar"/>
+	<classpathentry kind="lib" path="userlib/InsightsHubSSO-1.0.0-all.jar"/>
+	<classpathentry kind="lib" path="userlib/ngdbc-2.19.15.jar"/>
+	<classpathentry kind="lib" path="userlib/org.hsqldb.hsqldb-2.7.1.jar"/>
+	<classpathentry kind="lib" path="userlib/org.mariadb.jdbc.mariadb-java-client-2.7.5.jar"/>
+	<classpathentry kind="lib" path="userlib/postgresql-42.4.3.jar"/>
+	<classpathentry kind="lib" path="userlib/slf4j-api-2.0.7.jar"/>
+	<classpathentry kind="output" path="deployment/run/bin"/>
+</classpath>

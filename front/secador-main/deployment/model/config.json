@@ -1,0 +1,37 @@
+{
+  "Configuration": {
+    "DatabaseName": "default",
+    "DatabasePassword": "",
+    "DatabaseType": "HSQLDB",
+    "DatabaseHost": "",
+    "DatabaseUserName": "",
+    "DatabaseUseIntegratedSecurity": "False",
+    "ApplicationRootUrl": "http://localhost:8080/",
+    "ScheduledEventExecution": "None"
+  },
+  "Constants": {
+    "NanoflowCommons.Nanoflow_Commons_Version": "2.1.0",
+    "SiemensInsightsHubOSBarConnector.SiemensInsightsHubOSBarConnector_Version": "2.0.0",
+    "SiemensInsightsHubOSBarConnector.OSBarURL": "https://static.eu1.mindsphere.io/osbar/v4/js/main.min.js",
+    "SiemensInsightsHubOSBarConnector.Config": "{\"displayName\":\"Secador\",\"appVersion\":\"1.0.0\",\"appCopyright\":\"© Siemens 2023\",\"links\":{\"default\":[{\"type\":\"www\",\"name\":\"DEV Information\",\"value\":\"http://sie.ag/abc\"}],\"de\":[{\"type\":\"www\",\"name\":\"Entwicklungs-Information\",\"value\":\"http://sie.ag/abc\"}]}}",
+    "SiemensInsightsHubSingleSignOn.SiemensInsightsHubSingleSignOn_Version": "4.0.0",
+    "SiemensInsightsHubSingleSignOn.ModuleName": "InsigtsHubSingleSignOn",
+    "SiemensInsightsHubSingleSignOn.ApiReverseProxyConfig": "",
+    "SiemensInsightsHubSingleSignOn.AssetLinks": "",
+    "SiemensInsightsHubSingleSignOn.AppleAppSiteAssociation": "",
+    "SiemensInsightsHubSingleSignOn.PublicKeyURL": "https://core.piam.eu1.mindsphere.io/token_keys",
+    "SiemensInsightsHubSingleSignOn.GatewayURL": "https://gateway.eu1.mindsphere.io",
+    "SiemensInsightsHubSingleSignOn.HostTenant": "Change me",
+    "SiemensInsightsHubSingleSignOn.CockpitApplicationName": "secador",
+    "SiemensInsightsHubSingleSignOn.ClientId": "Change me",
+    "SiemensInsightsHubSingleSignOn.ClientSecret": "public",
+    "SiemensInsightsHubSingleSignOn.Scheme": "Change me",
+    "SiemensInsightsHubSingleSignOn.CockpitApplicationVersion": "1.0.0",
+    "SiemensInsightsHubSingleSignOn.UserTenant": "Change me",
+    "SiemensInsightsHubSingleSignOn.AskForCredentialsOnStartup": "True",
+    "SiemensInsightsHubSingleSignOn.UserEmail": "",
+    "SiemensInsightsHubSingleSignOn.EnableLocalApiReverseProxy": "True",
+    "SiemensInsightsHubWebContent.SiemensInsightsHubWebContentVersion": "4.0.0"
+  },
+  "AdminPassword": null
+}
