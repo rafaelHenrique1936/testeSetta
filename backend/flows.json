@@ -1,0 +1,117 @@
+[
+    {
+        "id": "2b708edc5d615257",
+        "type": "inject",
+        "z": "349b27fbb98a80ea",
+        "name": "json",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "log",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "idDryer",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "25",
+        "payloadType": "num",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "ba2c7fde4855114b"
+            ]
+        ]
+    },
+    {
+        "id": "ba2c7fde4855114b",
+        "type": "function",
+        "z": "349b27fbb98a80ea",
+        "name": "geraValores",
+        "func": "var valorAleatorio = Math.floor(Math.random() * (50 - 10 + 1)) + 20;\n\nvar mensagem = {\n    idTipoTelemetria: 2,\n    idSecador: 1,\n    valor: valorAleatorio\n}\n\n// Retorne a mensagem como um array contendo um único objeto\nreturn { payload : mensagem };\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "9647d61ad8a54af8"
+            ]
+        ]
+    },
+    {
+        "id": "53b63a42d7a5b23b",
+        "type": "debug",
+        "z": "349b27fbb98a80ea",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9647d61ad8a54af8",
+        "type": "postgresql",
+        "z": "349b27fbb98a80ea",
+        "name": "",
+        "query": "INSERT INTO tb_telemetria (id_tipo_telemetria, id_secador, data_hora_log, valor) VALUES ( {{msg.payload.idTipoTelemetria }}, {{ msg.payload.idSecador}}, now(), {{msg.payload.valor}});\n  ",
+        "postgreSQLConfig": "9e42dc83ee5dcdda",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "53b63a42d7a5b23b"
+            ]
+        ]
+    },
+    {
+        "id": "9e42dc83ee5dcdda",
+        "type": "postgreSQLConfig",
+        "name": "db_secador",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "db_secador",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "root",
+        "passwordFieldType": "str"
+    }
+]

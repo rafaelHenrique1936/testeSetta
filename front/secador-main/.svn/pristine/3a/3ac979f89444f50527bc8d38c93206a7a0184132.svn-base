@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Insights Hub</title>
+	<script>
+		window.location.assign("/sso" + window.location.search)
+	</script>
+</head>
+
+</html>

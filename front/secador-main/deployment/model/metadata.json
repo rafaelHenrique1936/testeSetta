@@ -1,0 +1,201 @@
+{
+  "DataBrokerConfiguration": {
+    "publishedServices": []
+  },
+  "RuntimeVersion": "9.24.3.8044",
+  "ProjectID": "c4e2f4fb-5735-44ee-8fe4-8d6c157a65f9",
+  "ProjectName": "secador",
+  "ModelVersion": "unversioned",
+  "Description": "",
+  "AdminUser": "MxAdmin",
+  "Roles": {
+    "8dd52bfa-6d7e-453b-b506-303c0a3d9567": {
+      "Name": "Admin"
+    },
+    "53f5d6fa-6da9-4a71-b011-454ec052cce8": {
+      "Name": "User"
+    }
+  },
+  "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+  "Constants": [
+    {
+      "Name": "NanoflowCommons.Nanoflow_Commons_Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "2.1.0"
+    },
+    {
+      "Name": "SiemensInsightsHubOSBarConnector.Config",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "{\"displayName\":\"Secador\",\"appVersion\":\"1.0.0\",\"appCopyright\":\"© Siemens 2023\",\"links\":{\"default\":[{\"type\":\"www\",\"name\":\"DEV Information\",\"value\":\"http://sie.ag/abc\"}],\"de\":[{\"type\":\"www\",\"name\":\"Entwicklungs-Information\",\"value\":\"http://sie.ag/abc\"}]}}"
+    },
+    {
+      "Name": "SiemensInsightsHubOSBarConnector.OSBarURL",
+      "Type": "String",
+      "Description": "URL of the Insights Hub OSBar.\r\nFor more details see here:\r\n\r\nhttps://design.mindsphere.io/osbar/introduction.html#tab1anchor0",
+      "DefaultValue": "https://static.eu1.mindsphere.io/osbar/v4/js/main.min.js"
+    },
+    {
+      "Name": "SiemensInsightsHubOSBarConnector.SiemensInsightsHubOSBarConnector_Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "2.0.0"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.ApiReverseProxyConfig",
+      "Type": "String",
+      "Description": "Sample forward exception configuration:\r\n\r\n[\r\n  {    \r\n    \"host\": \"http://localhost:4001\",\r\n    \"pattern\": \"^/api/oee/v3/assets/[a-f0-9]{32}/timeModelCategoryDistribution$\",\r\n    \"resourcePattern\": \"^/api/oee/v3\",\r\n    \"resourcePatternReplacement\": \"/protected\"\r\n  }\r\n]",
+      "DefaultValue": ""
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.AppleAppSiteAssociation",
+      "Type": "String",
+      "Description": "Add your apple-app-site-association file here.",
+      "DefaultValue": ""
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.AskForCredentialsOnStartup",
+      "Type": "Boolean",
+      "Description": "",
+      "DefaultValue": "True"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.AssetLinks",
+      "Type": "String",
+      "Description": "Generate your digital asset links file with Android Studio and paste the content here.\r\n\r\nHint: remove /r/n from the json file",
+      "DefaultValue": ""
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.ClientId",
+      "Type": "String",
+      "Description": "The clientId of your mobile app from the Developer Cockpit application registration",
+      "DefaultValue": "Change me"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.ClientSecret",
+      "Type": "String",
+      "Description": "The clientSecret of your mobile app from the Developer Cockpit application registration",
+      "DefaultValue": "public"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.CockpitApplicationName",
+      "Type": "String",
+      "Description": "Name of the application used in the Developer Cockpit.\r\n\r\nThis is used for JWT validation process and is mapped to the \"aud\" claim.",
+      "DefaultValue": "secador"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.CockpitApplicationVersion",
+      "Type": "String",
+      "Description": "Used to get application credentials, must be identical to the version in the Developer Cockpit.",
+      "DefaultValue": "1.0.0"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.EnableLocalApiReverseProxy",
+      "Type": "Boolean",
+      "Description": "Required to use the Siemens Insights Hub Web Component Widgets",
+      "DefaultValue": "True"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.GatewayURL",
+      "Type": "String",
+      "Description": "The Gateway URL",
+      "DefaultValue": "https://gateway.eu1.mindsphere.io"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.HostTenant",
+      "Type": "String",
+      "Description": "Name of Tenant where application is hosted.\r\nName is used during retrieval of application credentials.",
+      "DefaultValue": "Change me"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.ModuleName",
+      "Type": "String",
+      "Description": "InsigtsHubSingleSignOn",
+      "DefaultValue": "InsigtsHubSingleSignOn"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.PublicKeyURL",
+      "Type": "String",
+      "Description": "Endpoint where to fetcht the public keys for token validation.",
+      "DefaultValue": "https://core.piam.eu1.mindsphere.io/token_keys"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.Scheme",
+      "Type": "String",
+      "Description": "Use the scheme from deep link configuration used in the \"build native mobile app\"",
+      "DefaultValue": "Change me"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.SiemensInsightsHubSingleSignOn_Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "4.0.0"
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.UserEmail",
+      "Type": "String",
+      "Description": "Value is used for local development. Defaults to \"max.musterman@email.com\" in case no value provided.\r\n\r\nWill be set as email of the current \"Account\".\r\n\r\n",
+      "DefaultValue": ""
+    },
+    {
+      "Name": "SiemensInsightsHubSingleSignOn.UserTenant",
+      "Type": "String",
+      "Description": "Name of the user tenant.\r\nName is used during retrieval of application credentials.",
+      "DefaultValue": "Change me"
+    },
+    {
+      "Name": "SiemensInsightsHubWebContent.SiemensInsightsHubWebContentVersion",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "4.0.0"
+    }
+  ],
+  "ScheduledEvents": [],
+  "Languages": [
+    "pt_BR",
+    "en_US"
+  ],
+  "Configuration": {
+    "SourceDatabaseType": "HSQLDB",
+    "SourceDatabaseName": "default",
+    "SourceBuiltInDatabasePath": "model/sampledata/data/database"
+  },
+  "RequestHandlers": [
+    {
+      "Name": "/api/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/link/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/api-doc/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/rest/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/.well-known/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/rest-doc/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/p/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+/* =============================================================
+   IoT User Experience Toolkit colors
+   ========================================================== */
+
+// basic colors
+$white: #ffffff;
+$grey100: #f0f0f0; // $lightGrey
+$grey200: #d2d2d2; // $mediumGrey
+$grey250: #bebebe; // $pureBlack9
+$grey400: #969696; // $darkGrey
+$grey800: #323232; // $blackGrey
+
+$base000: #000000;
+$base200: #323232;
+$base450: #595959;
+$base600: #969696;
+$base750: #BEBEBE;
+$base800: #D2D2D2;
+$base900: #F0F0F0;
+$base950: #F6F6F6;
+$base1000: #FFFFFF;
+
+// functional colors
+$functionalRed: #f62447; // $trinidadRed
+$validationRed: #d0021b; // NEW - NOT IN USE
+$functionalYellow: #ffc800; // $tangerineYellow
+$functionalGreen: #65c728; // $willowGreen
+
+// state colors
+$coolBlue: #009eff;
+$stateBlue: #cce2fa; // $trueBlue20
+$stateBlue050: #7fb7f2; // $trueBlue50
+$stateBlue100: #006fe6; // $trueBlue
+$stateBlue250: #005cbf; // $trueBlueActive
+
+// context related colors
+$contextBlue050: #d1e8f0; // $iceBlue1
+$contextBlue150: #bbd0d7; // $iceBlue2
+$contextBlue600: #235461; // $iceBlue3
+$contextGreen050: #e6eed1; // $corianderGreen1
+$contextGreen200: #c8d1ba; // $corianderGreen2
+$contextGreen600: #5e6919; // $corianderGreen3
+$contextRed: #fcd3d2; // $tamarilloRed1
+$contextRed200: #d6b4b4; // $tamarilloRed2
+$contextRed500: #811211; // $tamarilloRed3
+$contextYellow: #ffedb5; // $barleyYellow1
+$contextYellow100: #e6dbb7; // $barleyYellow2
+$contextYellow600: #665e48; // $barleyYellow3
+
+// IoT User Experience Toolkit OS Colors
+$firefly: #1e2832;
+$aquaHaze: #dce1e6;
+$accentTealLight: #41aaaa;
+$dynamicPetrol: linear-gradient(-90deg, #50bebe 0%, #009999 50%, #0099b0 80%, #0099cb 100%);
+
+
+/* =============================================================
+   SIEMENS Colors
+   ========================================================== */
+
+// Corporate and primary colors
+$petrol: #009999;
+$petrolDynamic: linear-gradient(-90deg, #50bebe 0%, #009999 50%, #0099cb 80%, #0099b0 100%);
+$stoneDark: #3c464b;
+$stoneLight: #879baa;
+$stoneLight35: #becdd7;
+$sandDark: #73645a;
+$sandLight: #aaaa96;
+$sandLight35: #d7d7cd;
+$snow: #ffffff;
+
+// Accent colors
+$accentTealDark: #00646e;
+$accentTealLight: #41aaaa;
+$accentBlueDark: #005f87;
+$accentBlueLight: #50bed7;
+$accentYellowDark: #eb780a;
+$accentYellowLight: #ffb900;
+$accentRedDark: #641946;
+$accentRedLight: #af235f;
+$accentGreenDark: #647d2d;
+$accentGreenLight: #aab414;

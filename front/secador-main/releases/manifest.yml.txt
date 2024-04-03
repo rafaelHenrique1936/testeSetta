@@ -1,0 +1,6 @@
+applications:
+- name: viktorstutorial
+  disk_quota: 512M
+  memory: 1024M
+  services:
+  - tutorial-db

@@ -1,0 +1,178 @@
+@import "../../00-settings/color";
+@import "../../00-settings/settings";
+
+@mixin defaultTextStyles {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: $siemensFontRegular;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@mixin headline1 {
+    font-family: $siemensFontBlack;
+    font-size: 36px;
+    font-size: rem(36px);
+    line-height: 43px;
+    line-height: rem(43px);
+    margin-bottom: 20px;
+    margin-bottom: rem(20px);
+    margin-top: 0;
+}
+
+@mixin headline2 {
+    font-family: $siemensFontBold;
+    font-size: 31px;
+    font-size: rem(31px);
+    line-height: 43px;
+    line-height: rem(43px);
+    margin-bottom: 8px;
+    margin-bottom: rem(8px);
+    margin-top: 0;
+}
+
+@mixin headline3 {
+    font-family: $siemensFontRegular;
+    font-size: 26px;
+    font-size: rem(26px);
+    line-height: 36px;
+    line-height: rem(36px);
+    margin-bottom: 8px;
+    margin-bottom: rem(8px);
+    margin-top: 0;
+}
+
+@mixin headline4 {
+    font-family: $siemensFontRegular;
+    font-size: 21px;
+    font-size: rem(21px);
+    line-height: 29px;
+    line-height: rem(29px);
+    margin-bottom: 4px;
+    margin-bottom: rem(4px);
+    margin-top: 0;
+}
+
+@mixin headline5 {
+    font-family: $siemensFontRegular;
+    font-size: 17px;
+    font-size: rem(17px);
+    line-height: 23px;
+    line-height: rem(23px);
+    margin-bottom: 4px;
+    margin-bottom: rem(4px);
+    margin-top: 0;
+}
+
+@mixin headline6 {
+    font-family: $siemensFontRegular;
+    font-size: 16px;
+    font-size: rem(16px);
+    line-height: 22px;
+    line-height: rem(22px);
+    margin-bottom: 4px;
+    margin-bottom: rem(4px);
+    margin-top: 0;
+}
+
+@mixin paragraph {
+    font-size: 15px;
+    font-size: rem(15px);
+    line-height: 21px;
+    line-height: rem(21px);
+    margin-bottom: 16px;
+    margin-bottom: rem(16px);
+    margin-top: 0;
+
+    &.p--s {
+        font-size: 13px;
+        font-size: rem(13px);
+        line-height: 17px;
+        line-height: rem(17px);
+    }
+}
+
+@mixin small {
+    font-size: 12px;
+    font-size: rem(12px);
+    line-height: 16px;
+    line-height: rem(16px);
+}
+
+@mixin em {
+    // special font face that is already italic is used
+    font-family: $siemensFontItalic;
+}
+
+@mixin mark {
+    background-color: $stateBlue;
+}
+
+@mixin strong {
+    font-family: $siemensFontBold;
+}
+
+.h1 {
+    @include defaultTextStyles;
+    @include headline1;
+}
+
+.h2 {
+    @include defaultTextStyles;
+    @include headline2;
+}
+
+.h3 {
+    @include defaultTextStyles;
+    @include headline3;
+}
+
+.h4 {
+    @include defaultTextStyles;
+    @include headline4;
+}
+
+.h5 {
+    @include defaultTextStyles;
+    @include headline5;
+}
+
+.h6 {
+    @include defaultTextStyles;
+    @include headline6;
+}
+
+.subheadline {
+    @include defaultTextStyles;
+    color: $grey400;
+    font-size: 17px;
+    font-size: rem(17px);
+    line-height: 25px;
+    line-height: rem(25px);
+}
+
+.p {
+    @include defaultTextStyles;
+    @include paragraph;
+}
+
+.b, .strong {
+    @include defaultTextStyles;
+    @include strong;
+}
+
+.small {
+    @include defaultTextStyles;
+    @include small;
+}
+
+.i, .em {
+    @include defaultTextStyles;
+    @include em;
+}
+
+.mark {
+    @include defaultTextStyles;
+    @include mark;
+}
+

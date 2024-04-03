@@ -1,0 +1,41 @@
+Initialized native services in: C:\Users\steph\.gradle\native
+Initialized jansi services in: C:\Users\steph\.gradle\native
+Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot, JAVA_VERSION=11.0.20.1, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=11.0.20.1+1, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=11.0.20.1+1, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+The client will now receive all logging from the daemon (pid: 8984). The daemon log file: C:\Users\steph\.gradle\daemon\7.6\daemon-8984.out.log
+Starting 2nd build in daemon [uptime: 13 mins 25.776 secs, performance: 99%, non-heap usage: 17% of 256 MiB]
+Using 4 worker leases.
+Now considering [C:\Users\steph\Mendix\secador-main\deployment] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\Users\steph\Mendix\secador-main\deployment\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\steph\Mendix\secador-main\deployment\build.gradle'.
+Included projects: [root project 'deployment']
+
+> Configure project :
+Evaluating root project 'deployment' using build file 'C:\Users\steph\Mendix\secador-main\deployment\build.gradle'.
+Compiling build file 'C:\Users\steph\Mendix\secador-main\deployment\build.gradle' using SubsetScriptTransformer.
+Compiling build file 'C:\Users\steph\Mendix\secador-main\deployment\build.gradle' using BuildScriptTransformer.
+Compiling script 'C:\Users\steph\Mendix\secador-main\deployment\variables.gradle' using SubsetScriptTransformer.
+Compiling script 'C:\Users\steph\Mendix\secador-main\deployment\variables.gradle' using BuildScriptTransformer.
+All projects evaluated.
+Task name matched 'clean'
+Selected primary task 'clean' from project :
+Tasks to be executed: [task ':clean']
+Tasks that were excluded: []
+Resolve mutations for :clean (Thread[included builds,5,main]) started.
+destroyer locations for task group 0 (Thread[included builds,5,main]) started.
+:clean (Thread[included builds,5,main]) started.
+
+> Task :clean UP-TO-DATE
+Caching disabled for task ':clean' because:
+  Build cache is disabled
+Task ':clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+
+BUILD SUCCESSFUL in 6s
+1 actionable task: 1 up-to-date
+Watched directory hierarchies: []
+
+
+

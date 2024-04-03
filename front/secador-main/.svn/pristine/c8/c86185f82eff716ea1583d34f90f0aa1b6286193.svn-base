@@ -1,0 +1,5 @@
+@mixin mxui() {
+  .mx-reload-notification {
+    top: $uxt-os-bar-height; // height of OS-Bar
+  }
+}

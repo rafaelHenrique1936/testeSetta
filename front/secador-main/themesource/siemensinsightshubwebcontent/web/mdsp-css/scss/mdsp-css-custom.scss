@@ -1,0 +1,40 @@
+/*! User Experience Toolkit for Insights Hub and Industrial IoT / Development License Agreement: https://developer.mindsphere.io/license.html
+*/
+
+// This scss source file allows you to customize which modules are compiled into your
+// css and which not.
+// Please disable all modules that you want to be excluded from your css file,
+// but be aware that there are some dependencies, such as icons and buttons.
+
+
+// DEV Dependencies
+
+// in order to successfully compile these scss files you have to install
+// the following additional dev dependencies:
+// sass-rem (https://github.com/pierreburel/sass-em)
+// breakpoint-sass (https://github.com/at-import/breakpoint)
+
+// You can either install them into your project via npm
+// @import "_compass";
+// @import "_rem";
+// @import "_breakpoint";
+
+// or you can also copy the directories into the appropriate location like this:
+//@import "compass-mixins/lib/_compass";
+//@import "sass-rem/_rem";
+//@import "breakpoint-sass/stylesheets/_breakpoint";
+
+
+@import "00-settings/color";
+@import "00-settings/settings";
+@import "00-settings/webfonts_icons";
+
+
+// if you want to prefix parts or all of the css created by these scss files, you can wrap them
+// in a appropriate wrapper below, e.g.
+// .mdsp.#someId {
+//  insert imports here to prefix them
+// }
+
+
+@import "01-elements/typography/typography";

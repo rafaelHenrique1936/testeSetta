@@ -1,0 +1,99 @@
+//@font-face {
+//  font-family: "mdspcss";
+//  src: url('../../assets/fonts/mdspcss.eot');
+//  src: url('../../assets/fonts/mdspcss.eot?#iefix') format('eot'),
+//  url('../../assets/fonts/mdspcss.woff2') format('woff2'),
+//  url('../../assets/fonts/mdspcss.woff') format('woff'),
+//  url('../../assets/fonts/mdspcss.ttf') format('truetype');
+//}
+
+@import '_icons-regular.scss';
+@import '_icons-bold.scss';
+@import '_icons-filled.scss';
+
+@font-face {
+  font-family: "mdspcssregular";
+  font-display: block;
+  src: url('../../assets/fonts/mdspcssregular.eot');
+  src: url('../../assets/fonts/mdspcssregular.eot?#iefix') format('eot'),
+    url('../../assets/fonts/mdspcssregular.woff2') format('woff2'),
+    url('../../assets/fonts/mdspcssregular.woff') format('woff'),
+    url('../../assets/fonts/mdspcssregular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "mdspcssbold";
+  font-display: block;
+  src: url('../../assets/fonts/mdspcssbold.eot');
+  src: url('../../assets/fonts/mdspcssbold.eot?#iefix') format('eot'),
+    url('../../assets/fonts/mdspcssbold.woff2') format('woff2'),
+    url('../../assets/fonts/mdspcssbold.woff') format('woff'),
+    url('../../assets/fonts/mdspcssbold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "mdspcssfilled";
+  font-display: block;
+  src: url('../../assets/fonts/mdspcssfilled.eot');
+  src: url('../../assets/fonts/mdspcssfilled.eot?#iefix') format('eot'),
+    url('../../assets/fonts/mdspcssfilled.woff2') format('woff2'),
+    url('../../assets/fonts/mdspcssfilled.woff') format('woff'),
+    url('../../assets/fonts/mdspcssfilled.ttf') format('truetype');
+}
+
+// utility classes for icon manipulation, e.g. rotation
+.iconUxt {
+  &.is-rotated-90 {
+
+    &:before,
+    &:after {
+      display: inline-block;
+      transform: rotate(90deg);
+    }
+  }
+
+  &.is-rotated-180 {
+
+    &:before,
+    &:after {
+      display: inline-block;
+      transform: rotate(180deg);
+    }
+  }
+
+  &.is-rotated-270 {
+
+    &:before,
+    &:after {
+      display: inline-block;
+      transform: rotate(270deg);
+    }
+  }
+
+  &.is-flipped-vertical {
+
+    &:before,
+    &:after {
+      display: inline-block;
+      transform: scaleY(-1);
+    }
+  }
+
+  &.is-flipped-horizontal {
+
+    &:before,
+    &:after {
+      display: inline-block;
+      transform: scaleX(-1);
+    }
+  }
+
+  &.is-flipped {
+
+    &:before,
+    &:after {
+      display: inline-block;
+      transform: scale(-1);
+    }
+  }
+}

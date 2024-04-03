@@ -1,0 +1,2829 @@
+@mixin regularstyles {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "mdspcssregular" !important;
+}
+
+.iconUxt {
+  &:before {
+    @include regularstyles;
+  }
+}
+
+@mixin iconUxt-regular($filename, $insert: before) {
+  &:#{$insert} {
+    @include regularstyles;
+    content: regularchar($filename);
+  }
+}
+
+@function regularchar($filename) {
+  $char: "";
+
+  @if $filename==machineB {
+    $char: "\E001";
+  }
+
+  @if $filename==navigateRightSmall {
+    $char: "\E002";
+  }
+
+  @if $filename==flow {
+    $char: "\E003";
+  }
+
+  @if $filename==notification {
+    $char: "\E004";
+  }
+
+  @if $filename==information {
+    $char: "\E005";
+  }
+
+  @if $filename==updateAvailable {
+    $char: "\E006";
+  }
+
+  @if $filename==aspects {
+    $char: "\E007";
+  }
+
+  @if $filename==arrowSingleRight {
+    $char: "\E008";
+  }
+
+  @if $filename==printer {
+    $char: "\E009";
+  }
+
+  @if $filename==archive {
+    $char: "\E00A";
+  }
+
+  @if $filename==heart {
+    $char: "\E00B";
+  }
+
+  @if $filename==timeZone {
+    $char: "\E00C";
+  }
+
+  @if $filename==arrowLastBottom {
+    $char: "\E00D";
+  }
+
+  @if $filename==import {
+    $char: "\E00E";
+  }
+
+  @if $filename==asterisk {
+    $char: "\E00F";
+  }
+
+  @if $filename==emoteNeutral {
+    $char: "\E010";
+  }
+
+  @if $filename==train {
+    $char: "\E011";
+  }
+
+  @if $filename==mapAlternative {
+    $char: "\E012";
+  }
+
+  @if $filename==thermometer {
+    $char: "\E013";
+  }
+
+  @if $filename==listBulletMinus {
+    $char: "\E014";
+  }
+
+  @if $filename==compare {
+    $char: "\E015";
+  }
+
+  @if $filename==preview {
+    $char: "\E016";
+  }
+
+  @if $filename==calendar {
+    $char: "\E017";
+  }
+
+  @if $filename==copy {
+    $char: "\E018";
+  }
+
+  @if $filename==errorAlert {
+    $char: "\E019";
+  }
+
+  @if $filename==arrowSingleUp {
+    $char: "\E01A";
+  }
+
+  @if $filename==pressure {
+    $char: "\E01B";
+  }
+
+  @if $filename==legal {
+    $char: "\E01C";
+  }
+
+  @if $filename==headline {
+    $char: "\E01D";
+  }
+
+  @if $filename==variable {
+    $char: "\E01E";
+  }
+
+  @if $filename==chartTrend {
+    $char: "\E01F";
+  }
+
+  @if $filename==weatherSnow {
+    $char: "\E020";
+  }
+
+  @if $filename==listSorted {
+    $char: "\E021";
+  }
+
+  @if $filename==shoppingCart {
+    $char: "\E022";
+  }
+
+  @if $filename==filetypeApp {
+    $char: "\E023";
+  }
+
+  @if $filename==machineA {
+    $char: "\E024";
+  }
+
+  @if $filename==factoryMagnifier {
+    $char: "\E025";
+  }
+
+  @if $filename==hatMan {
+    $char: "\E026";
+  }
+
+  @if $filename==arrowDoubleUp {
+    $char: "\E027";
+  }
+
+  @if $filename==chartValueHorizontal {
+    $char: "\E028";
+  }
+
+  @if $filename==applyFilter {
+    $char: "\E029";
+  }
+
+  @if $filename==fileTree {
+    $char: "\E02A";
+  }
+
+  @if $filename==machineC {
+    $char: "\E02B";
+  }
+
+  @if $filename==sidebarShow {
+    $char: "\E02C";
+  }
+
+  @if $filename==createWorkbook {
+    $char: "\E02D";
+  }
+
+  @if $filename==starHalf {
+    $char: "\E02E";
+  }
+
+  @if $filename==arrowDoubleDown {
+    $char: "\E02F";
+  }
+
+  @if $filename==tag {
+    $char: "\E030";
+  }
+
+  @if $filename==certificate {
+    $char: "\E031";
+  }
+
+  @if $filename==folder {
+    $char: "\E032";
+  }
+
+  @if $filename==sidebar {
+    $char: "\E033";
+  }
+
+  @if $filename==subtenant {
+    $char: "\E034";
+  }
+
+  @if $filename==rolesStandard {
+    $char: "\E035";
+  }
+
+  @if $filename==chartDonut {
+    $char: "\E036";
+  }
+
+  @if $filename==agent {
+    $char: "\E037";
+  }
+
+  @if $filename==settingsAlternative {
+    $char: "\E038";
+  }
+
+  @if $filename==boxPlot {
+    $char: "\E039";
+  }
+
+  @if $filename==save {
+    $char: "\E03A";
+  }
+
+  @if $filename==moreAlternative {
+    $char: "\E03B";
+  }
+
+  @if $filename==filter {
+    $char: "\E03C";
+  }
+
+  @if $filename==dataManagement {
+    $char: "\E03D";
+  }
+
+  @if $filename==visibilityShown {
+    $char: "\E03E";
+  }
+
+  @if $filename==editDocument {
+    $char: "\E03F";
+  }
+
+  @if $filename==previous {
+    $char: "\E040";
+  }
+
+  @if $filename==redo {
+    $char: "\E041";
+  }
+
+  @if $filename==settings {
+    $char: "\E042";
+  }
+
+  @if $filename==phone {
+    $char: "\E043";
+  }
+
+  @if $filename==share {
+    $char: "\E044";
+  }
+
+  @if $filename==remove {
+    $char: "\E045";
+  }
+
+  @if $filename==moon {
+    $char: "\E046";
+  }
+
+  @if $filename==arrowStemSingleDown {
+    $char: "\E047";
+  }
+
+  @if $filename==robot {
+    $char: "\E048";
+  }
+
+  @if $filename==quote {
+    $char: "\E049";
+  }
+
+  @if $filename==limitsHidden {
+    $char: "\E04A";
+  }
+
+  @if $filename==filetypeText {
+    $char: "\E04B";
+  }
+
+  @if $filename==pause {
+    $char: "\E04C";
+  }
+
+  @if $filename==chartBarVertical {
+    $char: "\E04D";
+  }
+
+  @if $filename==apps {
+    $char: "\E04E";
+  }
+
+  @if $filename==filterList {
+    $char: "\E04F";
+  }
+
+  @if $filename==filetypePDF {
+    $char: "\E050";
+  }
+
+  @if $filename==upload {
+    $char: "\E051";
+  }
+
+  @if $filename==factory {
+    $char: "\E052";
+  }
+
+  @if $filename==assetNetwork {
+    $char: "\E053";
+  }
+
+  @if $filename==thumbDown {
+    $char: "\E054";
+  }
+
+  @if $filename==areaSelect {
+    $char: "\E055";
+  }
+
+  @if $filename==attention {
+    $char: "\E056";
+  }
+
+  @if $filename==movie {
+    $char: "\E057";
+  }
+
+  @if $filename==backButtonNarrow {
+    $char: "\E058";
+  }
+
+  @if $filename==emoteHappy {
+    $char: "\E059";
+  }
+
+  @if $filename==measure {
+    $char: "\E05A";
+  }
+
+  @if $filename==headset {
+    $char: "\E05B";
+  }
+
+  @if $filename==stopwatch {
+    $char: "\E05C";
+  }
+
+  @if $filename==limitsShown {
+    $char: "\E05D";
+  }
+
+  @if $filename==dashboardAlternative {
+    $char: "\E05E";
+  }
+
+  @if $filename==weatherSunny {
+    $char: "\E05F";
+  }
+
+  @if $filename==add {
+    $char: "\E060";
+  }
+
+  @if $filename==strikethrough {
+    $char: "\E061";
+  }
+
+  @if $filename==cancelCircle {
+    $char: "\E062";
+  }
+
+  @if $filename==next {
+    $char: "\E063";
+  }
+
+  @if $filename==chartPolar {
+    $char: "\E064";
+  }
+
+  @if $filename==listBullet {
+    $char: "\E065";
+  }
+
+  @if $filename==analysis {
+    $char: "\E066";
+  }
+
+  @if $filename==personMultiple {
+    $char: "\E067";
+  }
+
+  @if $filename==sidebarHide {
+    $char: "\E068";
+  }
+
+  @if $filename==duplicate {
+    $char: "\E069";
+  }
+
+  @if $filename==star {
+    $char: "\E06A";
+  }
+
+  @if $filename==rules {
+    $char: "\E06B";
+  }
+
+  @if $filename==updateGear {
+    $char: "\E06C";
+  }
+
+  @if $filename==image {
+    $char: "\E06D";
+  }
+
+  @if $filename==outgoingInApp {
+    $char: "\E06E";
+  }
+
+  @if $filename==home {
+    $char: "\E06F";
+  }
+
+  @if $filename==weatherRain {
+    $char: "\E070";
+  }
+
+  @if $filename==exit {
+    $char: "\E071";
+  }
+
+  @if $filename==dataMapping {
+    $char: "\E072";
+  }
+
+  @if $filename==audit {
+    $char: "\E073";
+  }
+
+  @if $filename==dragDrop {
+    $char: "\E074";
+  }
+
+  @if $filename==filetypeVideo {
+    $char: "\E075";
+  }
+
+  @if $filename==moonSun {
+    $char: "\E076";
+  }
+
+  @if $filename==parameter {
+    $char: "\E077";
+  }
+
+  @if $filename==weatherCloudy {
+    $char: "\E078";
+  }
+
+  @if $filename==arrowDoubleRight {
+    $char: "\E079";
+  }
+
+  @if $filename==undo {
+    $char: "\E07A";
+  }
+
+  @if $filename==frames {
+    $char: "\E07B";
+  }
+
+  @if $filename==map {
+    $char: "\E07C";
+  }
+
+  @if $filename==arrowLastRight {
+    $char: "\E07D";
+  }
+
+  @if $filename==sortDescending {
+    $char: "\E07E";
+  }
+
+  @if $filename==shareAlternative {
+    $char: "\E07F";
+  }
+
+  @if $filename==menu {
+    $char: "\E080";
+  }
+
+  @if $filename==chartGauge {
+    $char: "\E081";
+  }
+
+  @if $filename==chartPie {
+    $char: "\E082";
+  }
+
+  @if $filename==linkDissolve {
+    $char: "\E083";
+  }
+
+  @if $filename==help {
+    $char: "\E084";
+  }
+
+  @if $filename==removeCircle {
+    $char: "\E085";
+  }
+
+  @if $filename==temperature {
+    $char: "\E086";
+  }
+
+  @if $filename==rolesApp {
+    $char: "\E087";
+  }
+
+  @if $filename==move {
+    $char: "\E088";
+  }
+
+  @if $filename==fullscreen {
+    $char: "\E089";
+  }
+
+  @if $filename==italic {
+    $char: "\E08A";
+  }
+
+  @if $filename==camera {
+    $char: "\E08B";
+  }
+
+  @if $filename==filetypeDefault {
+    $char: "\E08C";
+  }
+
+  @if $filename==asset {
+    $char: "\E08D";
+  }
+
+  @if $filename==linkArrow {
+    $char: "\E08E";
+  }
+
+  @if $filename==questionMark {
+    $char: "\E08F";
+  }
+
+  @if $filename==weatherPartlyCloudy {
+    $char: "\E090";
+  }
+
+  @if $filename==more {
+    $char: "\E091";
+  }
+
+  @if $filename==desktop {
+    $char: "\E092";
+  }
+
+  @if $filename==record {
+    $char: "\E093";
+  }
+
+  @if $filename==cancel {
+    $char: "\E094";
+  }
+
+  @if $filename==timeSeriesImport {
+    $char: "\E095";
+  }
+
+  @if $filename==arrowFirstTop {
+    $char: "\E096";
+  }
+
+  @if $filename==lockClosed {
+    $char: "\E097";
+  }
+
+  @if $filename==subtenant2 {
+    $char: "\E098";
+  }
+
+  @if $filename==tagAlternative {
+    $char: "\E099";
+  }
+
+  @if $filename==delete {
+    $char: "\E09A";
+  }
+
+  @if $filename==email {
+    $char: "\E09B";
+  }
+
+  @if $filename==person {
+    $char: "\E09C";
+  }
+
+  @if $filename==shift {
+    $char: "\E09D";
+  }
+
+  @if $filename==package {
+    $char: "\E09E";
+  }
+
+  @if $filename==length {
+    $char: "\E09F";
+  }
+
+  @if $filename==fullscreenExit {
+    $char: "\E0A0";
+  }
+
+  @if $filename==graph {
+    $char: "\E0A1";
+  }
+
+  @if $filename==outgoingSmall {
+    $char: "\E0A2";
+  }
+
+  @if $filename==subtenant4 {
+    $char: "\E0A3";
+  }
+
+  @if $filename==arrowSingleLeft {
+    $char: "\E0A4";
+  }
+
+  @if $filename==note {
+    $char: "\E0A5";
+  }
+
+  @if $filename==play {
+    $char: "\E0A6";
+  }
+
+  @if $filename==selectNone {
+    $char: "\E0A7";
+  }
+
+  @if $filename==electricity {
+    $char: "\E0A8";
+  }
+
+  @if $filename==subtenantSmall {
+    $char: "\E0A9";
+  }
+
+  @if $filename==kpi {
+    $char: "\E0AA";
+  }
+
+  @if $filename==arrowStemSingleUp {
+    $char: "\E0AB";
+  }
+
+  @if $filename==element {
+    $char: "\E0AC";
+  }
+
+  @if $filename==filetypeArchive {
+    $char: "\E0AD";
+  }
+
+  @if $filename==edit {
+    $char: "\E0AE";
+  }
+
+  @if $filename==hierarchy {
+    $char: "\E0AF";
+  }
+
+  @if $filename==globalSettings {
+    $char: "\E0B0";
+  }
+
+  @if $filename==counter {
+    $char: "\E0B1";
+  }
+
+  @if $filename==plc {
+    $char: "\E0B2";
+  }
+
+  @if $filename==virtualHidden {
+    $char: "\E0B3";
+  }
+
+  @if $filename==version {
+    $char: "\E0B4";
+  }
+
+  @if $filename==moveToTop {
+    $char: "\E0B5";
+  }
+
+  @if $filename==weatherThunder {
+    $char: "\E0B6";
+  }
+
+  @if $filename==clipboard {
+    $char: "\E0B7";
+  }
+
+  @if $filename==filetypeXML {
+    $char: "\E0B8";
+  }
+
+  @if $filename==collapse {
+    $char: "\E0B9";
+  }
+
+  @if $filename==widgetDetails {
+    $char: "\E0BA";
+  }
+
+  @if $filename==exclamationDiamond {
+    $char: "\E0BB";
+  }
+
+  @if $filename==filetypeDrawing {
+    $char: "\E0BC";
+  }
+
+  @if $filename==expand {
+    $char: "\E0BD";
+  }
+
+  @if $filename==zoomOut {
+    $char: "\E0BE";
+  }
+
+  @if $filename==roles {
+    $char: "\E0BF";
+  }
+
+  @if $filename==thumbUp {
+    $char: "\E0C0";
+  }
+
+  @if $filename==clone {
+    $char: "\E0C1";
+  }
+
+  @if $filename==mqtt {
+    $char: "\E0C2";
+  }
+
+  @if $filename==arrowHierarchy {
+    $char: "\E0C3";
+  }
+
+  @if $filename==zoomIn {
+    $char: "\E0C4";
+  }
+
+  @if $filename==scopeAlternative {
+    $char: "\E0C5";
+  }
+
+  @if $filename==virtualShown {
+    $char: "\E0C6";
+  }
+
+  @if $filename==weatherSunrise {
+    $char: "\E0C7";
+  }
+
+  @if $filename==outdent {
+    $char: "\E0C8";
+  }
+
+  @if $filename==types {
+    $char: "\E0C9";
+  }
+
+  @if $filename==exclamationMark {
+    $char: "\E0CA";
+  }
+
+  @if $filename==scope {
+    $char: "\E0CB";
+  }
+
+  @if $filename==lockOpened {
+    $char: "\E0CC";
+  }
+
+  @if $filename==voltage {
+    $char: "\E0CD";
+  }
+
+  @if $filename==feedback {
+    $char: "\E0CE";
+  }
+
+  @if $filename==filetypeEMail {
+    $char: "\E0CF";
+  }
+
+  @if $filename==dataSource {
+    $char: "\E0D0";
+  }
+
+  @if $filename==coinStack {
+    $char: "\E0D1";
+  }
+
+  @if $filename==outgoingInMdsp {
+    $char: "\E0D2";
+  }
+
+  @if $filename==tile {
+    $char: "\E0D3";
+  }
+
+  @if $filename==stop {
+    $char: "\E0D4";
+  }
+
+  @if $filename==weatherStorm {
+    $char: "\E0D5";
+  }
+
+  @if $filename==chartHeatmap {
+    $char: "\E0D6";
+  }
+
+  @if $filename==chartMap {
+    $char: "\E0D7";
+  }
+
+  @if $filename==arrowStemSingleRight {
+    $char: "\E0D8";
+  }
+
+  @if $filename==selectAll {
+    $char: "\E0D9";
+  }
+
+  @if $filename==emoteSad {
+    $char: "\E0DA";
+  }
+
+  @if $filename==draggable {
+    $char: "\E0DB";
+  }
+
+  @if $filename==scale {
+    $char: "\E0DC";
+  }
+
+  @if $filename==statusOn {
+    $char: "\E0DD";
+  }
+
+  @if $filename==arrowStemSingleLeft {
+    $char: "\E0DE";
+  }
+
+  @if $filename==export {
+    $char: "\E0DF";
+  }
+
+  @if $filename==arrowFirstLeft {
+    $char: "\E0E0";
+  }
+
+  @if $filename==code {
+    $char: "\E0E1";
+  }
+
+  @if $filename==ok {
+    $char: "\E0E2";
+  }
+
+  @if $filename==reload {
+    $char: "\E0E3";
+  }
+
+  @if $filename==attachment {
+    $char: "\E0E4";
+  }
+
+  @if $filename==draw {
+    $char: "\E0E5";
+  }
+
+  @if $filename==clock {
+    $char: "\E0E6";
+  }
+
+  @if $filename==locationMarker {
+    $char: "\E0E7";
+  }
+
+  @if $filename==weatherSunset {
+    $char: "\E0E8";
+  }
+
+  @if $filename==download {
+    $char: "\E0E9";
+  }
+
+  @if $filename==outgoingExtSmall {
+    $char: "\E0EA";
+  }
+
+  @if $filename==calendarWeek {
+    $char: "\E0EB";
+  }
+
+  @if $filename==filetypeMisc {
+    $char: "\E0EC";
+  }
+
+  @if $filename==filterShow {
+    $char: "\E0ED";
+  }
+
+  @if $filename==chartRadar {
+    $char: "\E0EE";
+  }
+
+  @if $filename==widget {
+    $char: "\E0EF";
+  }
+
+  @if $filename==serviceCredential {
+    $char: "\E0F0";
+  }
+
+  @if $filename==sms {
+    $char: "\E0F1";
+  }
+
+  @if $filename==provider {
+    $char: "\E0F2";
+  }
+
+  @if $filename==forward {
+    $char: "\E0F3";
+  }
+
+  @if $filename==indent {
+    $char: "\E0F4";
+  }
+
+  @if $filename==filterHide {
+    $char: "\E0F5";
+  }
+
+  @if $filename==arrowDoubleLeft {
+    $char: "\E0F6";
+  }
+
+  @if $filename==dashboardSmall {
+    $char: "\E0F7";
+  }
+
+  @if $filename==ticket {
+    $char: "\E0F8";
+  }
+
+  @if $filename==bookmark {
+    $char: "\E0F9";
+  }
+
+  @if $filename==control {
+    $char: "\E0FA";
+  }
+
+  @if $filename==chartSankey {
+    $char: "\E0FB";
+  }
+
+  @if $filename==chart {
+    $char: "\E0FC";
+  }
+
+  @if $filename==filetypeTable {
+    $char: "\E0FD";
+  }
+
+  @if $filename==updateNotification {
+    $char: "\E0FE";
+  }
+
+  @if $filename==subtenant3 {
+    $char: "\E0FF";
+  }
+
+  @if $filename==buildingBlock {
+    $char: "\E100";
+  }
+
+  @if $filename==update {
+    $char: "\E101";
+  }
+
+  @if $filename==dashboard {
+    $char: "\E102";
+  }
+
+  @if $filename==statusOff {
+    $char: "\E103";
+  }
+
+  @if $filename==watch {
+    $char: "\E104";
+  }
+
+  @if $filename==arrowSingleDown {
+    $char: "\E105";
+  }
+
+  @if $filename==outgoing {
+    $char: "\E106";
+  }
+
+  @if $filename==restricted {
+    $char: "\E107";
+  }
+
+  @if $filename==clipboardInvalid {
+    $char: "\E108";
+  }
+
+  @if $filename==paperPlay {
+    $char: "\E109";
+  }
+
+  @if $filename==speedometer {
+    $char: "\E10A";
+  }
+
+  @if $filename==notificationSquare {
+    $char: "\E10B";
+  }
+
+  @if $filename==areaZoom {
+    $char: "\E10C";
+  }
+
+  @if $filename==reorder {
+    $char: "\E10D";
+  }
+
+  @if $filename==tableCreate {
+    $char: "\E10E";
+  }
+
+  @if $filename==maintenance {
+    $char: "\E10F";
+  }
+
+  @if $filename==strong {
+    $char: "\E110";
+  }
+
+  @if $filename==dashforward {
+    $char: "\E111";
+  }
+
+  @if $filename==separatorLine {
+    $char: "\E112";
+  }
+
+  @if $filename==addCircle {
+    $char: "\E113";
+  }
+
+  @if $filename==chartDurationCurve {
+    $char: "\E114";
+  }
+
+  @if $filename==flash {
+    $char: "\E115";
+  }
+
+  @if $filename==clipboardCheck {
+    $char: "\E116";
+  }
+
+  @if $filename==cut {
+    $char: "\E117";
+  }
+
+  @if $filename==gearBox {
+    $char: "\E118";
+  }
+
+  @if $filename==flagSmall {
+    $char: "\E119";
+  }
+
+  @if $filename==calendarDay {
+    $char: "\E11A";
+  }
+
+  @if $filename==sortAscending {
+    $char: "\E11B";
+  }
+
+  @if $filename==dropzone {
+    $char: "\E11C";
+  }
+
+  @if $filename==coin {
+    $char: "\E11D";
+  }
+
+  @if $filename==filetypeSound {
+    $char: "\E11E";
+  }
+
+  @if $filename==comment {
+    $char: "\E11F";
+  }
+
+  @if $filename==sun {
+    $char: "\E120";
+  }
+
+  @if $filename==filetypeImage {
+    $char: "\E121";
+  }
+
+  @if $filename==underline {
+    $char: "\E122";
+  }
+
+  @if $filename==chartBarHorizontal {
+    $char: "\E123";
+  }
+
+  @if $filename==sort {
+    $char: "\E124";
+  }
+
+  @if $filename==filetypeJSON {
+    $char: "\E125";
+  }
+
+  @if $filename==mobile {
+    $char: "\E126";
+  }
+
+  @if $filename==chartValueVertical {
+    $char: "\E127";
+  }
+
+  @if $filename==announcement {
+    $char: "\E128";
+  }
+
+  @if $filename==link {
+    $char: "\E129";
+  }
+
+  @if $filename==listBulletPlus {
+    $char: "\E12A";
+  }
+
+  @if $filename==check {
+    $char: "\E12B";
+  }
+
+  @if $filename==chartGantt {
+    $char: "\E12C";
+  }
+
+  @if $filename==chartBarStacked {
+    $char: "\E12D";
+  }
+
+  @if $filename==paste {
+    $char: "\E12E";
+  }
+
+  @if $filename==alarm {
+    $char: "\E12F";
+  }
+
+  @if $filename==storage {
+    $char: "\E130";
+  }
+
+  @if $filename==chartLine {
+    $char: "\E131";
+  }
+
+  @if $filename==search {
+    $char: "\E132";
+  }
+
+  @if $filename==visibilityHidden {
+    $char: "\E133";
+  }
+
+  @if $filename==backward {
+    $char: "\E134";
+  }
+
+  @if $filename==question {
+    $char: "\E135";
+  }
+
+  @if $filename==navigateLeftSmall {
+    $char: "\E136";
+  }
+
+  @if $filename==filterAlternative {
+    $char: "\E137";
+  }
+
+  @return $char;
+}
+
+.iconUxt.machineB {
+  @include iconUxt-regular(machineB);
+
+}
+
+.iconUxt.navigateRightSmall {
+  @include iconUxt-regular(navigateRightSmall);
+
+}
+
+.iconUxt.flow {
+  @include iconUxt-regular(flow);
+
+}
+
+.iconUxt.notification {
+  @include iconUxt-regular(notification);
+
+}
+
+.iconUxt.information {
+  @include iconUxt-regular(information);
+
+}
+
+.iconUxt.updateAvailable {
+  @include iconUxt-regular(updateAvailable);
+
+}
+
+.iconUxt.aspects {
+  @include iconUxt-regular(aspects);
+
+}
+
+.iconUxt.arrowSingleRight {
+  @include iconUxt-regular(arrowSingleRight);
+
+}
+
+.iconUxt.printer {
+  @include iconUxt-regular(printer);
+
+}
+
+.iconUxt.archive {
+  @include iconUxt-regular(archive);
+
+}
+
+.iconUxt.heart {
+  @include iconUxt-regular(heart);
+
+}
+
+.iconUxt.timeZone {
+  @include iconUxt-regular(timeZone);
+
+}
+
+.iconUxt.arrowLastBottom {
+  @include iconUxt-regular(arrowLastBottom);
+
+}
+
+.iconUxt.import {
+  @include iconUxt-regular(import);
+
+}
+
+.iconUxt.asterisk {
+  @include iconUxt-regular(asterisk);
+
+}
+
+.iconUxt.emoteNeutral {
+  @include iconUxt-regular(emoteNeutral);
+
+}
+
+.iconUxt.train {
+  @include iconUxt-regular(train);
+
+}
+
+.iconUxt.mapAlternative {
+  @include iconUxt-regular(mapAlternative);
+
+}
+
+.iconUxt.thermometer {
+  @include iconUxt-regular(thermometer);
+
+}
+
+.iconUxt.listBulletMinus {
+  @include iconUxt-regular(listBulletMinus);
+
+}
+
+.iconUxt.compare {
+  @include iconUxt-regular(compare);
+
+}
+
+.iconUxt.preview {
+  @include iconUxt-regular(preview);
+
+}
+
+.iconUxt.calendar {
+  @include iconUxt-regular(calendar);
+
+}
+
+.iconUxt.copy {
+  @include iconUxt-regular(copy);
+
+}
+
+.iconUxt.errorAlert {
+  @include iconUxt-regular(errorAlert);
+
+}
+
+.iconUxt.arrowSingleUp {
+  @include iconUxt-regular(arrowSingleUp);
+
+}
+
+.iconUxt.pressure {
+  @include iconUxt-regular(pressure);
+
+}
+
+.iconUxt.legal {
+  @include iconUxt-regular(legal);
+
+}
+
+.iconUxt.headline {
+  @include iconUxt-regular(headline);
+
+}
+
+.iconUxt.variable {
+  @include iconUxt-regular(variable);
+
+}
+
+.iconUxt.chartTrend {
+  @include iconUxt-regular(chartTrend);
+
+}
+
+.iconUxt.weatherSnow {
+  @include iconUxt-regular(weatherSnow);
+
+}
+
+.iconUxt.listSorted {
+  @include iconUxt-regular(listSorted);
+
+}
+
+.iconUxt.shoppingCart {
+  @include iconUxt-regular(shoppingCart);
+
+}
+
+.iconUxt.filetypeApp {
+  @include iconUxt-regular(filetypeApp);
+
+}
+
+.iconUxt.machineA {
+  @include iconUxt-regular(machineA);
+
+}
+
+.iconUxt.factoryMagnifier {
+  @include iconUxt-regular(factoryMagnifier);
+
+}
+
+.iconUxt.hatMan {
+  @include iconUxt-regular(hatMan);
+
+}
+
+.iconUxt.arrowDoubleUp {
+  @include iconUxt-regular(arrowDoubleUp);
+
+}
+
+.iconUxt.chartValueHorizontal {
+  @include iconUxt-regular(chartValueHorizontal);
+
+}
+
+.iconUxt.applyFilter {
+  @include iconUxt-regular(applyFilter);
+
+}
+
+.iconUxt.fileTree {
+  @include iconUxt-regular(fileTree);
+
+}
+
+.iconUxt.machineC {
+  @include iconUxt-regular(machineC);
+
+}
+
+.iconUxt.sidebarShow {
+  @include iconUxt-regular(sidebarShow);
+
+}
+
+.iconUxt.createWorkbook {
+  @include iconUxt-regular(createWorkbook);
+
+}
+
+.iconUxt.starHalf {
+  @include iconUxt-regular(starHalf);
+
+}
+
+.iconUxt.arrowDoubleDown {
+  @include iconUxt-regular(arrowDoubleDown);
+
+}
+
+.iconUxt.tag {
+  @include iconUxt-regular(tag);
+
+}
+
+.iconUxt.certificate {
+  @include iconUxt-regular(certificate);
+
+}
+
+.iconUxt.folder {
+  @include iconUxt-regular(folder);
+
+}
+
+.iconUxt.sidebar {
+  @include iconUxt-regular(sidebar);
+
+}
+
+.iconUxt.subtenant {
+  @include iconUxt-regular(subtenant);
+
+}
+
+.iconUxt.rolesStandard {
+  @include iconUxt-regular(rolesStandard);
+
+}
+
+.iconUxt.chartDonut {
+  @include iconUxt-regular(chartDonut);
+
+}
+
+.iconUxt.agent {
+  @include iconUxt-regular(agent);
+
+}
+
+.iconUxt.settingsAlternative {
+  @include iconUxt-regular(settingsAlternative);
+
+}
+
+.iconUxt.boxPlot {
+  @include iconUxt-regular(boxPlot);
+
+}
+
+.iconUxt.save {
+  @include iconUxt-regular(save);
+
+}
+
+.iconUxt.moreAlternative {
+  @include iconUxt-regular(moreAlternative);
+
+}
+
+.iconUxt.filter {
+  @include iconUxt-regular(filter);
+
+}
+
+.iconUxt.dataManagement {
+  @include iconUxt-regular(dataManagement);
+
+}
+
+.iconUxt.visibilityShown {
+  @include iconUxt-regular(visibilityShown);
+
+}
+
+.iconUxt.editDocument {
+  @include iconUxt-regular(editDocument);
+
+}
+
+.iconUxt.previous {
+  @include iconUxt-regular(previous);
+
+}
+
+.iconUxt.redo {
+  @include iconUxt-regular(redo);
+
+}
+
+.iconUxt.settings {
+  @include iconUxt-regular(settings);
+
+}
+
+.iconUxt.phone {
+  @include iconUxt-regular(phone);
+
+}
+
+.iconUxt.share {
+  @include iconUxt-regular(share);
+
+}
+
+.iconUxt.remove {
+  @include iconUxt-regular(remove);
+
+}
+
+.iconUxt.moon {
+  @include iconUxt-regular(moon);
+
+}
+
+.iconUxt.arrowStemSingleDown {
+  @include iconUxt-regular(arrowStemSingleDown);
+
+}
+
+.iconUxt.robot {
+  @include iconUxt-regular(robot);
+
+}
+
+.iconUxt.quote {
+  @include iconUxt-regular(quote);
+
+}
+
+.iconUxt.limitsHidden {
+  @include iconUxt-regular(limitsHidden);
+
+}
+
+.iconUxt.filetypeText {
+  @include iconUxt-regular(filetypeText);
+
+}
+
+.iconUxt.pause {
+  @include iconUxt-regular(pause);
+
+}
+
+.iconUxt.chartBarVertical {
+  @include iconUxt-regular(chartBarVertical);
+
+}
+
+.iconUxt.apps {
+  @include iconUxt-regular(apps);
+
+}
+
+.iconUxt.filterList {
+  @include iconUxt-regular(filterList);
+
+}
+
+.iconUxt.filetypePDF {
+  @include iconUxt-regular(filetypePDF);
+
+}
+
+.iconUxt.upload {
+  @include iconUxt-regular(upload);
+
+}
+
+.iconUxt.factory {
+  @include iconUxt-regular(factory);
+
+}
+
+.iconUxt.assetNetwork {
+  @include iconUxt-regular(assetNetwork);
+
+}
+
+.iconUxt.thumbDown {
+  @include iconUxt-regular(thumbDown);
+
+}
+
+.iconUxt.areaSelect {
+  @include iconUxt-regular(areaSelect);
+
+}
+
+.iconUxt.attention {
+  @include iconUxt-regular(attention);
+
+}
+
+.iconUxt.movie {
+  @include iconUxt-regular(movie);
+
+}
+
+.iconUxt.backButtonNarrow {
+  @include iconUxt-regular(backButtonNarrow);
+
+}
+
+.iconUxt.emoteHappy {
+  @include iconUxt-regular(emoteHappy);
+
+}
+
+.iconUxt.measure {
+  @include iconUxt-regular(measure);
+
+}
+
+.iconUxt.headset {
+  @include iconUxt-regular(headset);
+
+}
+
+.iconUxt.stopwatch {
+  @include iconUxt-regular(stopwatch);
+
+}
+
+.iconUxt.limitsShown {
+  @include iconUxt-regular(limitsShown);
+
+}
+
+.iconUxt.dashboardAlternative {
+  @include iconUxt-regular(dashboardAlternative);
+
+}
+
+.iconUxt.weatherSunny {
+  @include iconUxt-regular(weatherSunny);
+
+}
+
+.iconUxt.add {
+  @include iconUxt-regular(add);
+
+}
+
+.iconUxt.strikethrough {
+  @include iconUxt-regular(strikethrough);
+
+}
+
+.iconUxt.cancelCircle {
+  @include iconUxt-regular(cancelCircle);
+
+}
+
+.iconUxt.next {
+  @include iconUxt-regular(next);
+
+}
+
+.iconUxt.chartPolar {
+  @include iconUxt-regular(chartPolar);
+
+}
+
+.iconUxt.listBullet {
+  @include iconUxt-regular(listBullet);
+
+}
+
+.iconUxt.analysis {
+  @include iconUxt-regular(analysis);
+
+}
+
+.iconUxt.personMultiple {
+  @include iconUxt-regular(personMultiple);
+
+}
+
+.iconUxt.sidebarHide {
+  @include iconUxt-regular(sidebarHide);
+
+}
+
+.iconUxt.duplicate {
+  @include iconUxt-regular(duplicate);
+
+}
+
+.iconUxt.star {
+  @include iconUxt-regular(star);
+
+}
+
+.iconUxt.rules {
+  @include iconUxt-regular(rules);
+
+}
+
+.iconUxt.updateGear {
+  @include iconUxt-regular(updateGear);
+
+}
+
+.iconUxt.image {
+  @include iconUxt-regular(image);
+
+}
+
+.iconUxt.outgoingInApp {
+  @include iconUxt-regular(outgoingInApp);
+
+}
+
+.iconUxt.home {
+  @include iconUxt-regular(home);
+
+}
+
+.iconUxt.weatherRain {
+  @include iconUxt-regular(weatherRain);
+
+}
+
+.iconUxt.exit {
+  @include iconUxt-regular(exit);
+
+}
+
+.iconUxt.dataMapping {
+  @include iconUxt-regular(dataMapping);
+
+}
+
+.iconUxt.audit {
+  @include iconUxt-regular(audit);
+
+}
+
+.iconUxt.dragDrop {
+  @include iconUxt-regular(dragDrop);
+
+}
+
+.iconUxt.filetypeVideo {
+  @include iconUxt-regular(filetypeVideo);
+
+}
+
+.iconUxt.moonSun {
+  @include iconUxt-regular(moonSun);
+
+}
+
+.iconUxt.parameter {
+  @include iconUxt-regular(parameter);
+
+}
+
+.iconUxt.weatherCloudy {
+  @include iconUxt-regular(weatherCloudy);
+
+}
+
+.iconUxt.arrowDoubleRight {
+  @include iconUxt-regular(arrowDoubleRight);
+
+}
+
+.iconUxt.undo {
+  @include iconUxt-regular(undo);
+
+}
+
+.iconUxt.frames {
+  @include iconUxt-regular(frames);
+
+}
+
+.iconUxt.map {
+  @include iconUxt-regular(map);
+
+}
+
+.iconUxt.arrowLastRight {
+  @include iconUxt-regular(arrowLastRight);
+
+}
+
+.iconUxt.sortDescending {
+  @include iconUxt-regular(sortDescending);
+
+}
+
+.iconUxt.shareAlternative {
+  @include iconUxt-regular(shareAlternative);
+
+}
+
+.iconUxt.menu {
+  @include iconUxt-regular(menu);
+
+}
+
+.iconUxt.chartGauge {
+  @include iconUxt-regular(chartGauge);
+
+}
+
+.iconUxt.chartPie {
+  @include iconUxt-regular(chartPie);
+
+}
+
+.iconUxt.linkDissolve {
+  @include iconUxt-regular(linkDissolve);
+
+}
+
+.iconUxt.help {
+  @include iconUxt-regular(help);
+
+}
+
+.iconUxt.removeCircle {
+  @include iconUxt-regular(removeCircle);
+
+}
+
+.iconUxt.temperature {
+  @include iconUxt-regular(temperature);
+
+}
+
+.iconUxt.rolesApp {
+  @include iconUxt-regular(rolesApp);
+
+}
+
+.iconUxt.move {
+  @include iconUxt-regular(move);
+
+}
+
+.iconUxt.fullscreen {
+  @include iconUxt-regular(fullscreen);
+
+}
+
+.iconUxt.italic {
+  @include iconUxt-regular(italic);
+
+}
+
+.iconUxt.camera {
+  @include iconUxt-regular(camera);
+
+}
+
+.iconUxt.filetypeDefault {
+  @include iconUxt-regular(filetypeDefault);
+
+}
+
+.iconUxt.asset {
+  @include iconUxt-regular(asset);
+
+}
+
+.iconUxt.linkArrow {
+  @include iconUxt-regular(linkArrow);
+
+}
+
+.iconUxt.questionMark {
+  @include iconUxt-regular(questionMark);
+
+}
+
+.iconUxt.weatherPartlyCloudy {
+  @include iconUxt-regular(weatherPartlyCloudy);
+
+}
+
+.iconUxt.more {
+  @include iconUxt-regular(more);
+
+}
+
+.iconUxt.desktop {
+  @include iconUxt-regular(desktop);
+
+}
+
+.iconUxt.record {
+  @include iconUxt-regular(record);
+
+}
+
+.iconUxt.cancel {
+  @include iconUxt-regular(cancel);
+
+}
+
+.iconUxt.timeSeriesImport {
+  @include iconUxt-regular(timeSeriesImport);
+
+}
+
+.iconUxt.arrowFirstTop {
+  @include iconUxt-regular(arrowFirstTop);
+
+}
+
+.iconUxt.lockClosed {
+  @include iconUxt-regular(lockClosed);
+
+}
+
+.iconUxt.subtenant2 {
+  @include iconUxt-regular(subtenant2);
+
+}
+
+.iconUxt.tagAlternative {
+  @include iconUxt-regular(tagAlternative);
+
+}
+
+.iconUxt.delete {
+  @include iconUxt-regular(delete);
+
+}
+
+.iconUxt.email {
+  @include iconUxt-regular(email);
+
+}
+
+.iconUxt.person {
+  @include iconUxt-regular(person);
+
+}
+
+.iconUxt.shift {
+  @include iconUxt-regular(shift);
+
+}
+
+.iconUxt.package {
+  @include iconUxt-regular(package);
+
+}
+
+.iconUxt.length {
+  @include iconUxt-regular(length);
+
+}
+
+.iconUxt.fullscreenExit {
+  @include iconUxt-regular(fullscreenExit);
+
+}
+
+.iconUxt.graph {
+  @include iconUxt-regular(graph);
+
+}
+
+.iconUxt.outgoingSmall {
+  @include iconUxt-regular(outgoingSmall);
+
+}
+
+.iconUxt.subtenant4 {
+  @include iconUxt-regular(subtenant4);
+
+}
+
+.iconUxt.arrowSingleLeft {
+  @include iconUxt-regular(arrowSingleLeft);
+
+}
+
+.iconUxt.note {
+  @include iconUxt-regular(note);
+
+}
+
+.iconUxt.play {
+  @include iconUxt-regular(play);
+
+}
+
+.iconUxt.selectNone {
+  @include iconUxt-regular(selectNone);
+
+}
+
+.iconUxt.electricity {
+  @include iconUxt-regular(electricity);
+
+}
+
+.iconUxt.subtenantSmall {
+  @include iconUxt-regular(subtenantSmall);
+
+}
+
+.iconUxt.kpi {
+  @include iconUxt-regular(kpi);
+
+}
+
+.iconUxt.arrowStemSingleUp {
+  @include iconUxt-regular(arrowStemSingleUp);
+
+}
+
+.iconUxt.element {
+  @include iconUxt-regular(element);
+
+}
+
+.iconUxt.filetypeArchive {
+  @include iconUxt-regular(filetypeArchive);
+
+}
+
+.iconUxt.edit {
+  @include iconUxt-regular(edit);
+
+}
+
+.iconUxt.hierarchy {
+  @include iconUxt-regular(hierarchy);
+
+}
+
+.iconUxt.globalSettings {
+  @include iconUxt-regular(globalSettings);
+
+}
+
+.iconUxt.counter {
+  @include iconUxt-regular(counter);
+
+}
+
+.iconUxt.plc {
+  @include iconUxt-regular(plc);
+
+}
+
+.iconUxt.virtualHidden {
+  @include iconUxt-regular(virtualHidden);
+
+}
+
+.iconUxt.version {
+  @include iconUxt-regular(version);
+
+}
+
+.iconUxt.moveToTop {
+  @include iconUxt-regular(moveToTop);
+
+}
+
+.iconUxt.weatherThunder {
+  @include iconUxt-regular(weatherThunder);
+
+}
+
+.iconUxt.clipboard {
+  @include iconUxt-regular(clipboard);
+
+}
+
+.iconUxt.filetypeXML {
+  @include iconUxt-regular(filetypeXML);
+
+}
+
+.iconUxt.collapse {
+  @include iconUxt-regular(collapse);
+
+}
+
+.iconUxt.widgetDetails {
+  @include iconUxt-regular(widgetDetails);
+
+}
+
+.iconUxt.exclamationDiamond {
+  @include iconUxt-regular(exclamationDiamond);
+
+}
+
+.iconUxt.filetypeDrawing {
+  @include iconUxt-regular(filetypeDrawing);
+
+}
+
+.iconUxt.expand {
+  @include iconUxt-regular(expand);
+
+}
+
+.iconUxt.zoomOut {
+  @include iconUxt-regular(zoomOut);
+
+}
+
+.iconUxt.roles {
+  @include iconUxt-regular(roles);
+
+}
+
+.iconUxt.thumbUp {
+  @include iconUxt-regular(thumbUp);
+
+}
+
+.iconUxt.clone {
+  @include iconUxt-regular(clone);
+
+}
+
+.iconUxt.mqtt {
+  @include iconUxt-regular(mqtt);
+
+}
+
+.iconUxt.arrowHierarchy {
+  @include iconUxt-regular(arrowHierarchy);
+
+}
+
+.iconUxt.zoomIn {
+  @include iconUxt-regular(zoomIn);
+
+}
+
+.iconUxt.scopeAlternative {
+  @include iconUxt-regular(scopeAlternative);
+
+}
+
+.iconUxt.virtualShown {
+  @include iconUxt-regular(virtualShown);
+
+}
+
+.iconUxt.weatherSunrise {
+  @include iconUxt-regular(weatherSunrise);
+
+}
+
+.iconUxt.outdent {
+  @include iconUxt-regular(outdent);
+
+}
+
+.iconUxt.types {
+  @include iconUxt-regular(types);
+
+}
+
+.iconUxt.exclamationMark {
+  @include iconUxt-regular(exclamationMark);
+
+}
+
+.iconUxt.scope {
+  @include iconUxt-regular(scope);
+
+}
+
+.iconUxt.lockOpened {
+  @include iconUxt-regular(lockOpened);
+
+}
+
+.iconUxt.voltage {
+  @include iconUxt-regular(voltage);
+
+}
+
+.iconUxt.feedback {
+  @include iconUxt-regular(feedback);
+
+}
+
+.iconUxt.filetypeEMail {
+  @include iconUxt-regular(filetypeEMail);
+
+}
+
+.iconUxt.dataSource {
+  @include iconUxt-regular(dataSource);
+
+}
+
+.iconUxt.coinStack {
+  @include iconUxt-regular(coinStack);
+
+}
+
+.iconUxt.outgoingInMdsp {
+  @include iconUxt-regular(outgoingInMdsp);
+
+}
+
+.iconUxt.tile {
+  @include iconUxt-regular(tile);
+
+}
+
+.iconUxt.stop {
+  @include iconUxt-regular(stop);
+
+}
+
+.iconUxt.weatherStorm {
+  @include iconUxt-regular(weatherStorm);
+
+}
+
+.iconUxt.chartHeatmap {
+  @include iconUxt-regular(chartHeatmap);
+
+}
+
+.iconUxt.chartMap {
+  @include iconUxt-regular(chartMap);
+
+}
+
+.iconUxt.arrowStemSingleRight {
+  @include iconUxt-regular(arrowStemSingleRight);
+
+}
+
+.iconUxt.selectAll {
+  @include iconUxt-regular(selectAll);
+
+}
+
+.iconUxt.emoteSad {
+  @include iconUxt-regular(emoteSad);
+
+}
+
+.iconUxt.draggable {
+  @include iconUxt-regular(draggable);
+
+}
+
+.iconUxt.scale {
+  @include iconUxt-regular(scale);
+
+}
+
+.iconUxt.statusOn {
+  @include iconUxt-regular(statusOn);
+
+}
+
+.iconUxt.arrowStemSingleLeft {
+  @include iconUxt-regular(arrowStemSingleLeft);
+
+}
+
+.iconUxt.export {
+  @include iconUxt-regular(export);
+
+}
+
+.iconUxt.arrowFirstLeft {
+  @include iconUxt-regular(arrowFirstLeft);
+
+}
+
+.iconUxt.code {
+  @include iconUxt-regular(code);
+
+}
+
+.iconUxt.ok {
+  @include iconUxt-regular(ok);
+
+}
+
+.iconUxt.reload {
+  @include iconUxt-regular(reload);
+
+}
+
+.iconUxt.attachment {
+  @include iconUxt-regular(attachment);
+
+}
+
+.iconUxt.draw {
+  @include iconUxt-regular(draw);
+
+}
+
+.iconUxt.clock {
+  @include iconUxt-regular(clock);
+
+}
+
+.iconUxt.locationMarker {
+  @include iconUxt-regular(locationMarker);
+
+}
+
+.iconUxt.weatherSunset {
+  @include iconUxt-regular(weatherSunset);
+
+}
+
+.iconUxt.download {
+  @include iconUxt-regular(download);
+
+}
+
+.iconUxt.outgoingExtSmall {
+  @include iconUxt-regular(outgoingExtSmall);
+
+}
+
+.iconUxt.calendarWeek {
+  @include iconUxt-regular(calendarWeek);
+
+}
+
+.iconUxt.filetypeMisc {
+  @include iconUxt-regular(filetypeMisc);
+
+}
+
+.iconUxt.filterShow {
+  @include iconUxt-regular(filterShow);
+
+}
+
+.iconUxt.chartRadar {
+  @include iconUxt-regular(chartRadar);
+
+}
+
+.iconUxt.widget {
+  @include iconUxt-regular(widget);
+
+}
+
+.iconUxt.serviceCredential {
+  @include iconUxt-regular(serviceCredential);
+
+}
+
+.iconUxt.sms {
+  @include iconUxt-regular(sms);
+
+}
+
+.iconUxt.provider {
+  @include iconUxt-regular(provider);
+
+}
+
+.iconUxt.forward {
+  @include iconUxt-regular(forward);
+
+}
+
+.iconUxt.indent {
+  @include iconUxt-regular(indent);
+
+}
+
+.iconUxt.filterHide {
+  @include iconUxt-regular(filterHide);
+
+}
+
+.iconUxt.arrowDoubleLeft {
+  @include iconUxt-regular(arrowDoubleLeft);
+
+}
+
+.iconUxt.dashboardSmall {
+  @include iconUxt-regular(dashboardSmall);
+
+}
+
+.iconUxt.ticket {
+  @include iconUxt-regular(ticket);
+
+}
+
+.iconUxt.bookmark {
+  @include iconUxt-regular(bookmark);
+
+}
+
+.iconUxt.control {
+  @include iconUxt-regular(control);
+
+}
+
+.iconUxt.chartSankey {
+  @include iconUxt-regular(chartSankey);
+
+}
+
+.iconUxt.chart {
+  @include iconUxt-regular(chart);
+
+}
+
+.iconUxt.filetypeTable {
+  @include iconUxt-regular(filetypeTable);
+
+}
+
+.iconUxt.updateNotification {
+  @include iconUxt-regular(updateNotification);
+
+}
+
+.iconUxt.subtenant3 {
+  @include iconUxt-regular(subtenant3);
+
+}
+
+.iconUxt.buildingBlock {
+  @include iconUxt-regular(buildingBlock);
+
+}
+
+.iconUxt.update {
+  @include iconUxt-regular(update);
+
+}
+
+.iconUxt.dashboard {
+  @include iconUxt-regular(dashboard);
+
+}
+
+.iconUxt.statusOff {
+  @include iconUxt-regular(statusOff);
+
+}
+
+.iconUxt.watch {
+  @include iconUxt-regular(watch);
+
+}
+
+.iconUxt.arrowSingleDown {
+  @include iconUxt-regular(arrowSingleDown);
+
+}
+
+.iconUxt.outgoing {
+  @include iconUxt-regular(outgoing);
+
+}
+
+.iconUxt.restricted {
+  @include iconUxt-regular(restricted);
+
+}
+
+.iconUxt.clipboardInvalid {
+  @include iconUxt-regular(clipboardInvalid);
+
+}
+
+.iconUxt.paperPlay {
+  @include iconUxt-regular(paperPlay);
+
+}
+
+.iconUxt.speedometer {
+  @include iconUxt-regular(speedometer);
+
+}
+
+.iconUxt.notificationSquare {
+  @include iconUxt-regular(notificationSquare);
+
+}
+
+.iconUxt.areaZoom {
+  @include iconUxt-regular(areaZoom);
+
+}
+
+.iconUxt.reorder {
+  @include iconUxt-regular(reorder);
+
+}
+
+.iconUxt.tableCreate {
+  @include iconUxt-regular(tableCreate);
+
+}
+
+.iconUxt.maintenance {
+  @include iconUxt-regular(maintenance);
+
+}
+
+.iconUxt.strong {
+  @include iconUxt-regular(strong);
+
+}
+
+.iconUxt.dashforward {
+  @include iconUxt-regular(dashforward);
+
+}
+
+.iconUxt.separatorLine {
+  @include iconUxt-regular(separatorLine);
+
+}
+
+.iconUxt.addCircle {
+  @include iconUxt-regular(addCircle);
+
+}
+
+.iconUxt.chartDurationCurve {
+  @include iconUxt-regular(chartDurationCurve);
+
+}
+
+.iconUxt.flash {
+  @include iconUxt-regular(flash);
+
+}
+
+.iconUxt.clipboardCheck {
+  @include iconUxt-regular(clipboardCheck);
+
+}
+
+.iconUxt.cut {
+  @include iconUxt-regular(cut);
+
+}
+
+.iconUxt.gearBox {
+  @include iconUxt-regular(gearBox);
+
+}
+
+.iconUxt.flagSmall {
+  @include iconUxt-regular(flagSmall);
+
+}
+
+.iconUxt.calendarDay {
+  @include iconUxt-regular(calendarDay);
+
+}
+
+.iconUxt.sortAscending {
+  @include iconUxt-regular(sortAscending);
+
+}
+
+.iconUxt.dropzone {
+  @include iconUxt-regular(dropzone);
+
+}
+
+.iconUxt.coin {
+  @include iconUxt-regular(coin);
+
+}
+
+.iconUxt.filetypeSound {
+  @include iconUxt-regular(filetypeSound);
+
+}
+
+.iconUxt.comment {
+  @include iconUxt-regular(comment);
+
+}
+
+.iconUxt.sun {
+  @include iconUxt-regular(sun);
+
+}
+
+.iconUxt.filetypeImage {
+  @include iconUxt-regular(filetypeImage);
+
+}
+
+.iconUxt.underline {
+  @include iconUxt-regular(underline);
+
+}
+
+.iconUxt.chartBarHorizontal {
+  @include iconUxt-regular(chartBarHorizontal);
+
+}
+
+.iconUxt.sort {
+  @include iconUxt-regular(sort);
+
+}
+
+.iconUxt.filetypeJSON {
+  @include iconUxt-regular(filetypeJSON);
+
+}
+
+.iconUxt.mobile {
+  @include iconUxt-regular(mobile);
+
+}
+
+.iconUxt.chartValueVertical {
+  @include iconUxt-regular(chartValueVertical);
+
+}
+
+.iconUxt.announcement {
+  @include iconUxt-regular(announcement);
+
+}
+
+.iconUxt.link {
+  @include iconUxt-regular(link);
+
+}
+
+.iconUxt.listBulletPlus {
+  @include iconUxt-regular(listBulletPlus);
+
+}
+
+.iconUxt.check {
+  @include iconUxt-regular(check);
+
+}
+
+.iconUxt.chartGantt {
+  @include iconUxt-regular(chartGantt);
+
+}
+
+.iconUxt.chartBarStacked {
+  @include iconUxt-regular(chartBarStacked);
+
+}
+
+.iconUxt.paste {
+  @include iconUxt-regular(paste);
+
+}
+
+.iconUxt.alarm {
+  @include iconUxt-regular(alarm);
+
+}
+
+.iconUxt.storage {
+  @include iconUxt-regular(storage);
+
+}
+
+.iconUxt.chartLine {
+  @include iconUxt-regular(chartLine);
+
+}
+
+.iconUxt.search {
+  @include iconUxt-regular(search);
+
+}
+
+.iconUxt.visibilityHidden {
+  @include iconUxt-regular(visibilityHidden);
+
+}
+
+.iconUxt.backward {
+  @include iconUxt-regular(backward);
+
+}
+
+.iconUxt.question {
+  @include iconUxt-regular(question);
+
+}
+
+.iconUxt.navigateLeftSmall {
+  @include iconUxt-regular(navigateLeftSmall);
+
+}
+
+.iconUxt.filterAlternative {
+  @include iconUxt-regular(filterAlternative);
+
+}

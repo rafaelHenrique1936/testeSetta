@@ -1,0 +1,26 @@
+//
+// DISCLAIMER:
+// Do not change this file because it is core styling.
+// Customizing core files will make updating Atlas much more difficult in the future.
+// To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
+//
+@mixin simple-menu-bar() {
+    /* ==========================================================================
+       Navigation
+
+       Default Mendix simple menu bar
+    ========================================================================== */
+    .mx-menubar {
+
+        ul.mx-menubar-list {
+
+            li.mx-menubar-item {
+                &.active a {
+                    outline: none;
+                    border-radius: 0;
+                    box-shadow: inset 0 -3px 0 $brand-primary;
+                }
+            }
+        }
+    }
+}

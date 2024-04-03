@@ -1,0 +1,78 @@
+/* ==========================================================================
+   OS Bar fake, will only be used when the OS Bar could not be loaded
+   
+========================================================================== */
+
+// in case of the OS-Bar will be loaded we have to change the body as the OS-Bar is doing
+.mdsp_osbf_body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+// in case of the OS-Bar will be loaded we have to change the content as the OS-Bar is doing
+._mdsp_osbf_content {
+    position: relative;
+    flex: auto;
+    order: 2;
+    overflow-y: auto;
+}
+
+.mdsp_osbf_outer {
+    font-family: "Siemens Sans Roman", "Siemens Sans Regular", sans-serif;
+    position: relative;
+    flex-shrink: 0;
+    flex-basis: 40px !important;
+    margin-top: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $grey800;
+    color: #FFF;
+    display: flex;
+
+    &:before {
+        content: ' ';
+        display: block;
+        height: 4px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: -4px;
+        background-image: -owg-linear-gradient(to right, #50bebe 0%, #099 33%, #0099b0 66%, #0099cb 100%);
+        background-image: -webkit-linear-gradient(to right, #50bebe 0%, #099 33%, #0099b0 66%, #0099cb 100%);
+        background-image: -moz-linear-gradient(to right, #50bebe 0%, #099 33%, #0099b0 66%, #0099cb 100%);
+        background-image: -o-linear-gradient(to right, #50bebe 0%, #099 33%, #0099b0 66%, #0099cb 100%);
+        background-image: linear-gradient(to right, #50bebe 0%, #099 33%, #0099b0 66%, #0099cb 100%);
+    }
+    
+    &:after {
+        background-color: rgba(255,255,255,0.18);
+        bottom: 0;
+        content: ' ';
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.mdsp_osbf_inner {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.mdsp_osbf_link {
+    color: $white;
+
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+}
